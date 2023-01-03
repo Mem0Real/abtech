@@ -29,7 +29,7 @@ const contact = () => {
           </button>
         </div>
         <div className="">
-          <span className="-z-50">
+          <p className="-z-50">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15761.261074135882!2d38.73121343955079!3d9.034978400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8501bffc1c85%3A0x1fd4aeccb0e88b99!2zSGFidGVnaW9yZ2lzIEJyaWRnZSB8IFBpYXp6YSB8IOGIg-GJpeGJsOGMiuGLruGIreGMiuGItSDhi7XhiI3hi7Xhi60gfCDhjZLhi6vhiLM!5e0!3m2!1sen!2set!4v1671954721641!5m2!1sen!2set"
               // width="100%"
@@ -40,7 +40,7 @@ const contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-screen h-screen -z-50"
             ></iframe>
-          </span>
+          </p>
         </div>
 
         <Modal
@@ -67,7 +67,7 @@ const contact = () => {
             >
               <div className="lg:mt-12 text-center">
                 {/* Social Buttons */}
-                <span className="basis-1/4 inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <p className="basis-1/4 inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                   <a
                     className="cursor-pointer text-gray-500"
                     href="https://facebook.com"
@@ -122,11 +122,11 @@ const contact = () => {
                       <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                     </svg>
                   </a>
-                </span>
+                </p>
                 <hr />
                 {/* Phone */}
                 <div className="flex mt-12 flex-col justify-center items-center">
-                  <span className="flex py-5">
+                  <p className="flex py-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -142,8 +142,8 @@ const contact = () => {
                       />
                     </svg>
                     <p>+251925312421</p>
-                  </span>
-                  <span className=" flex py-5">
+                  </p>
+                  <p className=" flex py-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -159,12 +159,12 @@ const contact = () => {
                       />
                     </svg>
                     <p>+251910371581</p>
-                  </span>
+                  </p>
                 </div>
                 <hr />
                 {/* Email */}
                 {/* <div className="flex mt-16 justify-center items-center mx-auto"> */}
-                <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start pt-12">
+                <p className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start pt-12">
                   <svg
                     width="34"
                     height="34"
@@ -203,7 +203,7 @@ const contact = () => {
                     ></path>
                   </svg>
                   <p className="pl-3">abuSolarTech@gmail.com</p>
-                </span>
+                </p>
                 {/* </div> */}
               </div>
             </div>
