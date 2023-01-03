@@ -296,12 +296,12 @@ const Navbar = () => {
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
                     <div className="flex flex-col">
-                      <div
+                      {/* <div
                         className="w-full h-36 bg-cover bg-center"
                         style={{
                           backgroundImage: `url(${dropDownItem.src})`,
                         }}
-                      ></div>
+                      ></div> */}
                       <div className="text-center">
                         <p className="font-semibold">{dropDownItem.name}</p>
                         <p className="text-sm">{dropDownItem.description}</p>
