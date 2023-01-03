@@ -287,15 +287,15 @@ const Navbar = () => {
             ref={drop2Ref}
             className={`${!drop1 || !drop2 ? "hidden" : "block"}`}
           >
-            <div className="h-fit bg-white text-black flex flex-wrap justify-center items-center pb-12">
+            <div className="h-full bg-white text-black flex flex-wrap justify-center items-center pb-12">
               {dropDownData.map((dropDownItem, key) => {
                 return (
                   <a
                     key={key}
-                    className="h-72 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
+                    className="h-72 mt-12 flex flex-col justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
-                    <div className="flex flex-col">
+                    {/* <div className="flex flex-col"> */}
                       <div
                         className={`bg-battery bg-no-repeat h-24 w-full bg-cover bg-center`}
                         style={{
@@ -306,7 +306,7 @@ const Navbar = () => {
                         <p className="font-semibold">{dropDownItem.name}</p>
                         <p className="text-sm">{dropDownItem.description}</p>
                       </div>
-                    </div>
+                    {/* </div> */}
                   </a>
                 );
               })}
