@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://abusolar.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://abusolar.vercel.app/about</loc>
+  </url>
+  <url>
+    <loc>https://abusolar.vercel.app/contact</loc>
+  </url>
+  <url>
+    <loc>https://abusolar.vercel.app/solutions/products</loc>
+  </url>
+  <url>
+    <loc>https://abusolar.vercel.app/solutions/projects</loc>
+  </url>
+  <url>
+    <loc>https://abusolar.vercel.app/solutions/services</loc>
+  </url>
+</urlset>;
