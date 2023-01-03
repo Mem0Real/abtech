@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { scroller } from "react-scroll";
+
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
+
+import { scroller } from "react-scroll";
 import "animate.css";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 
@@ -77,47 +80,56 @@ const Navbar = () => {
       name: "Batteries",
       location: "battery",
       description: "Reliable & Durable.",
+      src: "/images/dropDown/battery.jpg",
     },
     {
       name: "Line Interactive UPS",
       location: "lineIU",
       description: "Save your work incase of power outage.",
+      src: "/images/dropDown/lineIU.jpg",
     },
     {
       name: "Online UPS",
       location: "onlineU",
       description: "Protect your device from voltage spike.",
+      src: "/images/dropDown/onlineU.jpg",
     },
     {
       name: "Power Inverter",
       location: "powinv",
       description: "Easily Convert DC to AC.",
+      src: "/images/dropDown/powinv.jpg",
     },
 
     {
       name: "Solar Charge Controller",
       location: "socc",
       description: "Maintain your preferred charge amount.",
+      src: "/images/dropDown/socc.jpg",
     },
     {
       name: "Solar Inverter",
       location: "solarinv",
       description: "Easily Convert Solar Power to AC.",
+      src: "/images/dropDown/solarinv.jpg",
     },
     {
       name: "Solar Lighting System",
       location: "soli",
       description: "Harness the Sun, setup a great lighting system.",
+      src: "/images/dropDown/soli.jpg",
     },
     {
       name: "Solar Panel",
       location: "sopan",
       description: "Top of the line solar recieving plates.",
+      src: "/images/dropDown/sopan.jpg",
     },
     {
       name: "Solar Power System",
       location: "sps",
       description: "Control power flow from solar energy.",
+      src: "/images/dropDown/sps.jpg",
     },
   ];
 
@@ -280,12 +292,20 @@ const Navbar = () => {
                 return (
                   <a
                     key={key}
-                    className="px-5 pb-12 h-36 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
+                    className="h-60 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
-                    <div className="text-center">
-                      <p className="font-semibold">{dropDownItem.name}</p>
-                      <p className="text-sm">{dropDownItem.description}</p>
+                    <div className="flex flex-col">
+                      <div
+                        className="w-full h-36 bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url(${dropDownItem.src})`,
+                        }}
+                      ></div>
+                      <div className="text-center">
+                        <p className="font-semibold">{dropDownItem.name}</p>
+                        <p className="text-sm">{dropDownItem.description}</p>
+                      </div>
                     </div>
                   </a>
                 );
