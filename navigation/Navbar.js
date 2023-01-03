@@ -80,56 +80,56 @@ const Navbar = () => {
       name: "Batteries",
       location: "battery",
       description: "Reliable & Durable.",
-      src: "../public/images/dropDown/battery.jpg",
+      src: "images/dropDown/battery.jpg",
     },
     {
       name: "Line Interactive UPS",
       location: "lineIU",
       description: "Save your work incase of power outage.",
-      src: "../public/images/dropDown/lineIU.jpg",
+      src: "images/dropDown/lineIU.jpg",
     },
     {
       name: "Online UPS",
       location: "onlineU",
       description: "Protect your device from voltage spike.",
-      src: "../public/images/dropDown/onlineU.jpg",
+      src: "images/dropDown/onlineU.jpg",
     },
     {
       name: "Power Inverter",
       location: "powinv",
       description: "Easily Convert DC to AC.",
-      src: "../public/images/dropDown/powinv.jpg",
+      src: "images/dropDown/powinv.jpg",
     },
 
     {
       name: "Solar Charge Controller",
       location: "socc",
       description: "Maintain your preferred charge amount.",
-      src: "../public/images/dropDown/socc.jpg",
+      src: "images/dropDown/socc.jpg",
     },
     {
       name: "Solar Inverter",
       location: "solarinv",
       description: "Easily Convert Solar Power to AC.",
-      src: "../public/images/dropDown/solarinv.jpg",
+      src: "images/dropDown/solarinv.jpg",
     },
     {
       name: "Solar Lighting System",
       location: "soli",
       description: "Harness the Sun, setup a great lighting system.",
-      src: "../public/images/dropDown/soli.jpg",
+      src: "images/dropDown/soli.jpg",
     },
     {
       name: "Solar Panel",
       location: "sopan",
       description: "Top of the line solar recieving plates.",
-      src: "../public/images/dropDown/sopan.jpg",
+      src: "images/dropDown/sopan.jpg",
     },
     {
       name: "Solar Power System",
       location: "sps",
       description: "Control power flow from solar energy.",
-      src: "../public/images/dropDown/sps.jpg",
+      src: "images/dropDown/sps.jpg",
     },
   ];
 
@@ -296,12 +296,12 @@ const Navbar = () => {
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
                     <div className="flex flex-col">
-                      {/* <div
+                      <div
                         className="w-full h-36 bg-cover bg-center"
                         style={{
                           backgroundImage: `url(${dropDownItem.src})`,
                         }}
-                      ></div> */}
+                      ></div>
                       <div className="text-center">
                         <p className="font-semibold">{dropDownItem.name}</p>
                         <p className="text-sm">{dropDownItem.description}</p>
