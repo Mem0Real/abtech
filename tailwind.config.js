@@ -22,6 +22,16 @@ module.exports = {
         productBg: "url('/images/resizedImg/product.webp')",
         productDarkBg: "url('/images/productDark.jpg')",
         serviceBg: "url('/images/resizedImg/service.webp')",
+
+        battery: "url('/images/dropDown/battery.jpg')",
+        lineIU: "url('/images/dropDown/lineIU.jpg')",
+        onlineU: "url('/images/dropDown/onlineU.jpg')",
+        powinv: "url('/images/dropDown/powinv.jpg')",
+        socc: "url('/images/dropDown/socc.jpg')",
+        solarinv: "url('/images/dropDown/solarinv.jpg')",
+        soli: "url('/images/dropDown/soli.jpg')",
+        sopan: "url('/images/dropDown/sopan.jpg')",
+        sps: "url('/images/dropDown/sps.jpg')",
       },
       fontFamily: {
         montserrat: ["MontserratLight"],

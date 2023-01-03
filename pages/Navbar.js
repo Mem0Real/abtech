@@ -1,10 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
-
-import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
-
+import React, { useState, useRef } from "react";
 import { scroller } from "react-scroll";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import "animate.css";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 
@@ -20,8 +17,6 @@ const Navbar = () => {
 
   const btn1Ref = useRef();
   const btn2Ref = useRef();
-
-  const [width, height] = useDeviceSize();
 
   // Open & Close the First Dropdown
   const openDrop1 = () => {
@@ -43,35 +38,20 @@ const Navbar = () => {
   };
 
   // Navigate to Products page then scroll to appropriate location
-  let off;
-  if (width <= 414) {
-    off = -1700;
-  } else if (width > 414 && width <= 820) {
-    off = -1000;
-  } else if (width > 820 && width <= 912) {
-    off = -1000;
-  } else if (width > 910 && width <= 1024) {
-    off = -700;
-  } else if (width > 1024 && width <= 1280) {
-    off = -600;
-  } else {
-    off = -470;
-  }
 
   const scrollTarget = (target) => {
-    scroller.scrollTo(target, { smooth: true, duration: 1300, offset: off });
-    closeDrop1();
+    scroller.scrollTo(target, { smooth: true, duration: 1300, offset: -50 });
+    setDrop1(false);
   };
 
   const scrollToPage = (target) => {
-    closeDrop1();
+    close();
     if (window.location.pathname !== "/solutions/products") {
-      router.push("/solutions/products").then(() => {
-        window.location.pathname === "/solutions/products" &&
-          setTimeout(() => {
-            scrollTarget(target);
-          }, 700);
-      });
+      router.replace("/solutions/products").then(
+        setTimeout(() => {
+          scrollTarget(target);
+        }, 700)
+      );
     } else scrollTarget(target);
   };
 
@@ -80,70 +60,60 @@ const Navbar = () => {
       name: "Batteries",
       location: "battery",
       description: "Reliable & Durable.",
-      src: "/images/dropDown/battery.jpg",
     },
     {
       name: "Line Interactive UPS",
       location: "lineIU",
       description: "Save your work incase of power outage.",
-      src: "/images/dropDown/lineIU.jpg",
     },
     {
       name: "Online UPS",
       location: "onlineU",
       description: "Protect your device from voltage spike.",
-      src: "/images/dropDown/onlineU.jpg",
     },
     {
       name: "Power Inverter",
       location: "powinv",
       description: "Easily Convert DC to AC.",
-      src: "/images/dropDown/powinv.jpg",
     },
 
     {
       name: "Solar Charge Controller",
       location: "socc",
       description: "Maintain your preferred charge amount.",
-      src: "/images/dropDown/socc.jpg",
     },
     {
       name: "Solar Inverter",
       location: "solarinv",
       description: "Easily Convert Solar Power to AC.",
-      src: "/images/dropDown/solarinv.jpg",
     },
     {
       name: "Solar Lighting System",
       location: "soli",
-      description: "Harness the Sun, setup a great lighting system.",
-      src: "/images/dropDown/soli.jpg",
+      description: "Harness the Sun, get infinite energy supply.",
     },
     {
       name: "Solar Panel",
       location: "sopan",
       description: "Top of the line solar recieving plates.",
-      src: "/images/dropDown/sopan.jpg",
     },
     {
       name: "Solar Power System",
       location: "sps",
       description: "Control power flow from solar energy.",
-      src: "/images/dropDown/sps.jpg",
     },
   ];
 
   return (
     <ClickAwayListener onClickAway={() => closeDrop1()}>
-      <div>
+      <div className="z-50">
         <div className={`z-30 w-full`}>
           <div className="antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300">
             <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
               <div className="flex flex-row items-center justify-between p-4">
                 <Link
                   href="/"
-                  className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
-                  prefetch={false}
+                  className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline"
                 >
                   Abu Solar Technology
                 </Link>
@@ -152,8 +122,6 @@ const Navbar = () => {
                   onClick={() => {
                     setOpen(!open);
                   }}
-                  role="button"
-                  aria-label="Menu"
                 >
                   <svg
                     fill="currentColor"
@@ -182,20 +150,19 @@ const Navbar = () => {
                 } flex-col flex-grow my-4 md:pb-0 md:flex md:justify-end md:flex-row`}
               >
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   href="/"
-                  prefetch={false}
                 >
                   Home
                 </Link>
-                <a
+                <button
                   ref={btn1Ref}
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   onClick={() => {
                     drop1 ? closeDrop1() : openDrop1();
                   }}
                 >
-                  <div className="flex">
+                  <div className="flex mx-3">
                     <span>Solutions</span>
                     <svg
                       fill="currentColor"
@@ -211,19 +178,17 @@ const Navbar = () => {
                       ></path>
                     </svg>
                   </div>
-                </a>
+                </button>
 
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   href="/about"
-                  prefetch={false}
                 >
                   About
                 </Link>
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   href="/contact"
-                  prefetch={false}
                 >
                   Contact
                 </Link>
@@ -233,26 +198,22 @@ const Navbar = () => {
         </div>
 
         {/* Dropdown 1 */}
-        <div className={`relative w-full z-40 `}>
-          <div
-            ref={drop1Ref}
-            className={`${!drop1 ? "hidden" : "flex justify-center"}`}
-          >
-            <div className="h-16 bg-white text-black items-center w-full flex justify-between px-3 md:px-24 ">
+        <div className={`relative w-screen z-40 `}>
+          <div ref={drop1Ref} className={`${!drop1 ? "hidden" : "block"}`}>
+            <div className="h-16 bg-white text-black flex justify-between items-center">
               <Link
-                className="py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="/solutions/projects"
-                prefetch={false}
               >
                 Projects
               </Link>
               <div className="inline-flex rounded-md shadow-sm">
-                <a
+                <button
                   ref={btn2Ref}
                   onClick={() => (drop2 ? closeDrop2() : openDrop2())}
-                  className="pl-3 md:pl-0 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 >
-                  <div className="flex">
+                  <div className="flex mx-3">
                     <span>Products</span>
                     <svg
                       fill="currentColor"
@@ -268,12 +229,11 @@ const Navbar = () => {
                       ></path>
                     </svg>
                   </div>
-                </a>
+                </button>
               </div>
               <Link
-                className="btn py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="/solutions/services"
-                prefetch={false}
               >
                 Services
               </Link>
@@ -287,27 +247,19 @@ const Navbar = () => {
             ref={drop2Ref}
             className={`${!drop1 || !drop2 ? "hidden" : "block"}`}
           >
-            <div className="h-fit bg-white text-black flex flex-wrap justify-center items-center pb-12">
-              {dropDownData.map((dropDownItem, key) => {
+            <div className="bg-white text-black flex flex-col flex-wrap">
+              {dropDownData.map((dropDownItem, index) => {
                 return (
-                  <a
-                    key={key}
-                    className="h-72 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
+                  <button
+                    key={index + dropDownItem}
+                    className="flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl border-opacity-30 rounded-md"
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
-                    <div className="flex flex-col">
-                      <div
-                        className={`bg-battery bg-no-repeat h-24 w-full bg-cover bg-center`}
-                        style={{
-                          backgroundImage: `url(${dropDownItem.src})`,
-                        }}
-                      ></div>
-                      <div className="text-center">
-                        <p className="font-semibold">{dropDownItem.name}</p>
-                        <p className="text-sm">{dropDownItem.description}</p>
-                      </div>
+                    <div className="text-center">
+                      <p className="font-semibold">{dropDownItem.name}</p>
+                      <p className="text-sm">{dropDownItem.description}</p>
                     </div>
-                  </a>
+                  </button>
                 );
               })}
             </div>
@@ -319,23 +271,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-const useDeviceSize = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    // component is mounted and window is available
-    handleWindowResize();
-    window.addEventListener("resize", handleWindowResize);
-    // unsubscribe from the event on component unmount
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  return [width, height];
-};
