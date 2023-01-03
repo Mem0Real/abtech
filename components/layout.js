@@ -22,12 +22,8 @@ export default function Layout({ children }) {
           content="HhKAQU5hfMo-VQl2en2VtJO2YpLD3vGuo7X-thnSDCE"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
-          rel="stylesheet"
-        />
+
+        
       </Head>
       <header>
         <Navbar width={width} height={height} />
