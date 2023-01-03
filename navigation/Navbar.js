@@ -292,7 +292,7 @@ const Navbar = () => {
                 return (
                   <a
                     key={key}
-                    className="h-60 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
+                    className="h-72 mt-12 flex justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
                     <div className="flex flex-col">
