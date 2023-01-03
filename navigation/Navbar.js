@@ -67,7 +67,7 @@ const Navbar = () => {
         window.location.pathname === "/solutions/products" &&
           setTimeout(() => {
             scrollTarget(target);
-          }, 1400);
+          }, 700);
       });
     } else scrollTarget(target);
   };
