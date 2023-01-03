@@ -296,17 +296,21 @@ const Navbar = () => {
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
                     {/* <div className="flex flex-col"> */}
-                      <div
-                        className={`bg-battery bg-no-repeat h-36 w-full bg-cover bg-center`}
-                        style={{
-                          backgroundImage: `url(${dropDownItem.src})`,
-                        }}
-                      ></div>
-                      <br />
-                      <div className="text-center">
-                        <p className="font-semibold">{dropDownItem.name}</p>
-                        <p className="text-sm">{dropDownItem.description}</p>
-                      </div>
+                    <div
+                      className={`bg-battery bg-no-repeat h-24 w-full bg-cover ${
+                        dropDownItem.location === "solarinv"
+                          ? "bg-top"
+                          : "bg-center"
+                      }`}
+                      style={{
+                        backgroundImage: `url(${dropDownItem.src})`,
+                      }}
+                    ></div>
+                    <br />
+                    <div className="text-center">
+                      <p className="font-semibold">{dropDownItem.name}</p>
+                      <p className="text-sm">{dropDownItem.description}</p>
+                    </div>
                     {/* </div> */}
                   </a>
                 );
