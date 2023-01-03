@@ -28,10 +28,6 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap"
           rel="stylesheet"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <header>
         <Navbar width={width} height={height} />

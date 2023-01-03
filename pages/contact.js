@@ -29,7 +29,7 @@ const contact = () => {
           </button>
         </div>
         <div className="">
-          <p className="-z-50">
+          <span className="-z-50">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15761.261074135882!2d38.73121343955079!3d9.034978400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8501bffc1c85%3A0x1fd4aeccb0e88b99!2zSGFidGVnaW9yZ2lzIEJyaWRnZSB8IFBpYXp6YSB8IOGIg-GJpeGJsOGMiuGLruGIreGMiuGItSDhi7XhiI3hi7Xhi60gfCDhjZLhi6vhiLM!5e0!3m2!1sen!2set!4v1671954721641!5m2!1sen!2set"
               // width="100%"
@@ -40,7 +40,7 @@ const contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-screen h-screen -z-50"
             ></iframe>
-          </p>
+          </span>
         </div>
 
         <Modal
