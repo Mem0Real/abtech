@@ -22,8 +22,6 @@ export default function Layout({ children }) {
           content="HhKAQU5hfMo-VQl2en2VtJO2YpLD3vGuo7X-thnSDCE"
         />
         <link rel="icon" href="/favicon.ico" />
-
-        
       </Head>
       <header>
         <Navbar width={width} height={height} />
