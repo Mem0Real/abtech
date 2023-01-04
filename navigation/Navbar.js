@@ -142,13 +142,13 @@ const Navbar = () => {
               <div className="flex flex-row items-center justify-between p-4">
                 <Link
                   href="/"
-                  className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                  className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:ring-neutral-700 active:ring-neutral-900"
                   prefetch={false}
                 >
                   Abu Solar Technology
                 </Link>
                 <button
-                  className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                  className="rounded-lg md:hidden focus:ring-neutral-700 active:ring-neutral-900"
                   onClick={() => {
                     setOpen(!open);
                   }}
@@ -182,7 +182,7 @@ const Navbar = () => {
                 } flex-col flex-grow my-4 md:pb-0 md:flex md:justify-end md:flex-row`}
               >
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                   href="/"
                   prefetch={false}
                 >
@@ -190,7 +190,7 @@ const Navbar = () => {
                 </Link>
                 <a
                   ref={btn1Ref}
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                   onClick={() => {
                     drop1 ? closeDrop1() : openDrop1();
                   }}
@@ -214,14 +214,14 @@ const Navbar = () => {
                 </a>
 
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                   href="/about"
                   prefetch={false}
                 >
                   About
                 </Link>
                 <Link
-                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                  className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                   href="/contact"
                   prefetch={false}
                 >
@@ -240,7 +240,7 @@ const Navbar = () => {
           >
             <div className="h-16 bg-white text-black items-center w-full flex justify-between px-3 md:px-24 ">
               <Link
-                className="py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                 href="/solutions/projects"
                 prefetch={false}
               >
@@ -250,7 +250,7 @@ const Navbar = () => {
                 <a
                   ref={btn2Ref}
                   onClick={() => (drop2 ? closeDrop2() : openDrop2())}
-                  className="pl-3 md:pl-0 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:outline-none focus:shadow-outline"
+                  className="pl-3 md:pl-0 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 hover:cursor-pointer focus:ring-neutral-700 active:ring-neutral-900"
                 >
                   <div className="flex">
                     <span>Products</span>
@@ -271,7 +271,7 @@ const Navbar = () => {
                 </a>
               </div>
               <Link
-                className="btn py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="btn py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900"
                 href="/solutions/services"
                 prefetch={false}
               >
@@ -292,7 +292,7 @@ const Navbar = () => {
                 return (
                   <a
                     key={key}
-                    className="h-72 mt-12 flex flex-col justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
+                    className="h-72 mt-12 flex flex-col justify-center items-center bg-transparent hover:cursor-pointer hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:ring-neutral-700 active:ring-neutral-900 border-black/30 border border-t-0 border-l-0 border-r-1 w-52 p-2 shadow-2xl rounded-md"
                     onClick={() => scrollToPage(dropDownItem.location)}
                   >
                     {/* <div className="flex flex-col"> */}

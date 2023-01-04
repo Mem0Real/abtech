@@ -29,7 +29,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <footer>
         <button
-          className="fixed bottom-16 right-7 hover:outline hover:outline-blue-700 rounded-full"
+          className="fixed bottom-6 right-7 hover:outline hover:outline-blue-700 rounded-full outline-offset-2"
           onClick={() => {
             scrollToTop();
           }}
@@ -38,8 +38,8 @@ export default function Layout({ children }) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="53"
-            height="53"
+            width="43"
+            height="43"
             fill="currentColor"
             className="bi bi-arrow-up-circle"
             viewBox="0 0 16 16"
