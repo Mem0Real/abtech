@@ -16,7 +16,8 @@ const products = () => {
         </div>
 
         {/* Batteries */}
-        <div className="h-fit border border-x-0 border-b-black" id="battery">
+        <span id="battery"></span>
+        <div className="h-fit border border-x-0 border-b-black">
           <section className="mt-56 body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -68,7 +69,8 @@ const products = () => {
         </div>
 
         {/* Line Interactive UPS */}
-        <div className="h-fit " id="lineIU">
+        <span id="lineIU"></span>
+        <div className="h-fit ">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -95,7 +97,8 @@ const products = () => {
         </div>
 
         {/* Online UPS */}
-        <div className="h-fit border border-x-0 border-y-black" id="onlineU">
+        <span id="onlineU"></span>
+        <div className="h-fit border border-x-0 border-y-black">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -144,7 +147,8 @@ const products = () => {
         </div>
 
         {/* Power Inverter */}
-        <div className="h-fit border border-x-0 border-y-black " id="powinv">
+        <span id="powinv"></span>
+        <div className="h-fit border border-x-0 border-y-black ">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -170,7 +174,8 @@ const products = () => {
         </div>
 
         {/* Solar Charge Controller */}
-        <div className="h-fit border border-x-0 border-y-black" id="socc">
+        <span id="socc"></span>
+        <div className="h-fit border border-x-0 border-y-black">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -219,7 +224,8 @@ const products = () => {
         </div>
 
         {/* Solar Inverter */}
-        <div className="h-fit border border-x-0 border-y-black " id="solarinv">
+        <span id="solarinv"></span>
+        <div className="h-fit border border-x-0 border-y-black ">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -244,7 +250,8 @@ const products = () => {
         </div>
 
         {/* Solar Lighting System */}
-        <div className="h-fit border border-x-0 border-y-black" id="soli">
+        <span id="soli"></span>
+        <div className="h-fit border border-x-0 border-y-black">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -295,7 +302,8 @@ const products = () => {
         </div>
 
         {/* Solar Panel */}
-        <div className="h-fit border border-x-0 border-y-black " id="sopan">
+        <span id="sopan"></span>
+        <div className="h-fit border border-x-0 border-y-black ">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -321,7 +329,8 @@ const products = () => {
         </div>
 
         {/* Solar Power System */}
-        <div className="h-fit border border-x-0 border-y-black" id="sps">
+        <span id="sps"></span>
+        <div className="h-fit border border-x-0 border-y-black">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
