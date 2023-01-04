@@ -60,11 +60,13 @@ const Navbar = () => {
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, { smooth: true, duration: 1300, offset: off });
-    closeDrop2();
+    closeDrop1();
+    open && setOpen(false);
   };
 
   const scrollToPage = (target) => {
-    closeDrop2();
+    closeDrop1();
+    open && setOpen(false);
     if (window.location.pathname !== "/solutions/products") {
       router.push("/solutions/products").then(() => {
         window.location.pathname === "/solutions/products" &&
