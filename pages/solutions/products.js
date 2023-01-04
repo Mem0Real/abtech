@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nuka from "../../carousel/Nuka";
 import Layout from "../../components/layout";
+import { Element } from "react-scroll";
 
 const products = () => {
   const [width, height] = useDeviceSize();
@@ -16,9 +17,11 @@ const products = () => {
         </div>
 
         {/* Batteries */}
-        <span id="battery"></span>
-        <div className="h-fit border border-x-0 border-b-black">
-          <section className="mt-56 body-font">
+        <Element
+          className="h-fit mt-48 border border-x-0 border-b-black"
+          name="battery"
+        >
+          <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
                 <>
@@ -66,11 +69,10 @@ const products = () => {
               )}
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Line Interactive UPS */}
-        <span id="lineIU"></span>
-        <div className="h-fit ">
+        <Element className="h-fit " name="lineIU">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -94,11 +96,13 @@ const products = () => {
               </div>
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Online UPS */}
-        <span id="onlineU"></span>
-        <div className="h-fit border border-x-0 border-y-black">
+        <Element
+          className="h-fit border border-x-0 border-y-black"
+          name="onlineU"
+        >
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -144,11 +148,13 @@ const products = () => {
               )}
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Power Inverter */}
-        <span id="powinv"></span>
-        <div className="h-fit border border-x-0 border-y-black ">
+        <Element
+          className="h-fit border border-x-0 border-y-black "
+          name="powinv"
+        >
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -171,11 +177,10 @@ const products = () => {
               </div>
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Solar Charge Controller */}
-        <span id="socc"></span>
-        <div className="h-fit border border-x-0 border-y-black">
+        <Element className="h-fit border border-x-0 border-y-black" name="socc">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -221,11 +226,13 @@ const products = () => {
               )}
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Solar Inverter */}
-        <span id="solarinv"></span>
-        <div className="h-fit border border-x-0 border-y-black ">
+        <Element
+          className="h-fit border border-x-0 border-y-black "
+          name="solarinv"
+        >
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -247,11 +254,10 @@ const products = () => {
               </div>
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Solar Lighting System */}
-        <span id="soli"></span>
-        <div className="h-fit border border-x-0 border-y-black">
+        <Element className="h-fit border border-x-0 border-y-black" name="soli">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -299,11 +305,13 @@ const products = () => {
               )}
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Solar Panel */}
-        <span id="sopan"></span>
-        <div className="h-fit border border-x-0 border-y-black ">
+        <Element
+          className="h-fit border border-x-0 border-y-black "
+          name="sopan"
+        >
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -326,11 +334,10 @@ const products = () => {
               </div>
             </div>
           </section>
-        </div>
+        </Element>
 
         {/* Solar Power System */}
-        <span id="sps"></span>
-        <div className="h-fit border border-x-0 border-y-black">
+        <Element className="h-fit border border-x-0 border-y-black" name="sps">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -376,7 +383,7 @@ const products = () => {
               )}
             </div>
           </section>
-        </div>
+        </Element>
       </div>
     </Layout>
   );

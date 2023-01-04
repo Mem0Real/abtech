@@ -44,19 +44,21 @@ const Navbar = () => {
 
   // Navigate to Products page then scroll to appropriate location
   let off = 0;
-  // if (width >= 375 && width <= 414) {
-  //   off = -3000;
-  // } else if (width > 414 && width <= 820) {
-  //   off = -1000;
-  // } else if (width > 820 && width <= 912) {
-  //   off = -1000;
-  // } else if (width > 910 && width <= 1024) {
-  //   off = -700;
-  // } else if (width > 1024 && width <= 1280) {
-  //   off = -600;
-  // } else {
-  //   off = -470;
-  // }
+  if (width <= 414) {
+    off = -2950;
+  } else if (width > 414 && width <= 614) {
+    off = -1660;
+  } else if (width > 614 && width <= 820) {
+    off = -1050;
+  } else if (width > 820 && width <= 912) {
+    off = -1000;
+  } else if (width > 912 && width <= 1024) {
+    off = -1100;
+  } else if (width > 1024 && width <= 1280) {
+    off = -600;
+  } else {
+    off = -740;
+  }
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, {
@@ -65,11 +67,11 @@ const Navbar = () => {
       duration: 700,
       offset: off,
     });
-    closeDrop1();
+    closeDrop2();
   };
 
   const scrollToPage = (target) => {
-    closeDrop1();
+    closeDrop2();
     if (window.location.pathname !== "/solutions/products") {
       router.push("/solutions/products").then(() => {
         window.location.pathname === "/solutions/products" &&
@@ -144,7 +146,7 @@ const Navbar = () => {
         <div className={`z-30 w-full`}>
           <div className="antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300">
             <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-              <div className="flex flex-row items-center justify-between p-4">
+              <div className="flex flex-row items-center justify-between p-0 md:p-4">
                 <Link
                   href="/"
                   className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:ring-neutral-700 active:ring-neutral-900"
