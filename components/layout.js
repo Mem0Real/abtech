@@ -29,7 +29,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <footer>
         <button
-          className="fixed bottom-6 right-7 hover:outline hover:outline-blue-700 rounded-full outline-offset-2"
+          className="fixed bottom-16 right-7 hover:outline hover:outline-blue-700 rounded-full outline-offset-2"
           onClick={() => {
             scrollToTop();
           }}
