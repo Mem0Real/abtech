@@ -44,8 +44,8 @@ const Navbar = () => {
 
   // Navigate to Products page then scroll to appropriate location
   let off;
-  if (width <= 414) {
-    off = -1700;
+  if (width >= 375 && width <= 414) {
+    off = -3000;
   } else if (width > 414 && width <= 820) {
     off = -1000;
   } else if (width > 820 && width <= 912) {
@@ -60,11 +60,11 @@ const Navbar = () => {
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, { smooth: true, duration: 1300, offset: off });
-    closeDrop1();
+    closeDrop2();
   };
 
   const scrollToPage = (target) => {
-    closeDrop1();
+    closeDrop2();
     if (window.location.pathname !== "/solutions/products") {
       router.push("/solutions/products").then(() => {
         window.location.pathname === "/solutions/products" &&
