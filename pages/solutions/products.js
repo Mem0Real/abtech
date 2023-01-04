@@ -16,10 +16,7 @@ const products = () => {
         </div>
 
         {/* Batteries */}
-        <div
-          className="h-fit mt-56 border border-x-0 border-b-black"
-          id="battery"
-        >
+        <div className="h-fit mt-56 border border-x-0 border-b-black">
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {width <= 768 ? (
@@ -33,6 +30,7 @@ const products = () => {
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
                       Batteries
                     </h1>
+                    <span id="battery"></span>
                     <p className="mb-8 leading-relaxed text-center">
                       We provide exceptional batteries that can hold upto 12hrs
                       of charge. They have solar adaptive chips that enable them
@@ -49,6 +47,8 @@ const products = () => {
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
                       Batteries
                     </h1>
+                    <span id="battery"></span>
+
                     <p className="mb-8 leading-relaxed text-center">
                       We provide exceptional batteries that can hold upto 12hrs
                       of charge. They have solar adaptive chips that enable them
