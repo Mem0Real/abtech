@@ -43,20 +43,20 @@ const Navbar = () => {
   };
 
   // Navigate to Products page then scroll to appropriate location
-  let off;
-  if (width >= 375 && width <= 414) {
-    off = -3000;
-  } else if (width > 414 && width <= 820) {
-    off = -1000;
-  } else if (width > 820 && width <= 912) {
-    off = -1000;
-  } else if (width > 910 && width <= 1024) {
-    off = -700;
-  } else if (width > 1024 && width <= 1280) {
-    off = -600;
-  } else {
-    off = -470;
-  }
+  let off = 0;
+  // if (width >= 375 && width <= 414) {
+  //   off = -3000;
+  // } else if (width > 414 && width <= 820) {
+  //   off = -1000;
+  // } else if (width > 820 && width <= 912) {
+  //   off = -1000;
+  // } else if (width > 910 && width <= 1024) {
+  //   off = -700;
+  // } else if (width > 1024 && width <= 1280) {
+  //   off = -600;
+  // } else {
+  //   off = -470;
+  // }
 
   const scrollTarget = (target) => {
     scroller.scrollTo(target, { smooth: true, duration: 1300, offset: off });
