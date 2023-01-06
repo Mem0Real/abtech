@@ -4,8 +4,8 @@ import Layout from "../components/layout";
 const About = () => {
   return (
     <Layout>
-      <div className="bg-aboutBg bg-black bg-center bg-cover bg-no-repeat text-black bg-fixed">
-      <div className="h-72 bg-transparent"></div>
+      <div className="bg-aboutBg bg-black dark:bg-black bg-center bg-cover bg-no-repeat text-black bg-fixed">
+        <div className="h-72 bg-transparent"></div>
         <div className="box-content flex flex-col items-center justify-center h-3/4 w-3/4 mx-auto backdrop-contrast-150 backdrop-blur-sm">
           <h3 className="text-2xl underline">Mission</h3>
           <br />
