@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import Image from "next/image";
 import project1 from "../../public/images/project1.jpg";
 import project2 from "../../public/images/project2.jpg";
+import project3 from "../../public/images/project3.jpg";
 
 const projects = () => {
   const [width, height] = useDeviceSize();
@@ -24,15 +25,15 @@ const projects = () => {
               {width <= 768 ? (
                 <>
                   {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"> */}
-                    <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
-                      <Image
-                        width={500}
-                        height={500}
-                        src={project1}
-                        className="object-cover object-center"
-                        alt="Hosanna"
-                      />
-                    </div>
+                  <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                    <Image
+                      width={500}
+                      height={500}
+                      src={project1}
+                      className="object-cover object-center"
+                      alt="Hosanna"
+                    />
+                  </div>
                   {/* </div> */}
                   <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
@@ -64,15 +65,15 @@ const projects = () => {
                   <br />
 
                   {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"> */}
-                    <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
-                      <Image
-                        width={500}
-                        height={500}
-                        src={project1}
-                        className="object-cover object-center"
-                        alt="Hosanna Hospital"
-                      />
-                    </div>
+                  <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                    <Image
+                      width={500}
+                      height={500}
+                      src={project1}
+                      className="object-cover object-center"
+                      alt="Hosanna Hospital"
+                    />
+                  </div>
                   {/* </div> */}
                 </>
               )}
@@ -85,15 +86,15 @@ const projects = () => {
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"> */}
-                <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
-                  <Image
-                    width={500}
-                    height={500}
-                    src={project2}
-                    className="object-cover object-center"
-                    alt="Shegole"
-                  />
-                </div>
+              <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                <Image
+                  width={500}
+                  height={500}
+                  src={project2}
+                  className="object-cover object-center"
+                  alt="Shegole"
+                />
+              </div>
               {/* </div> */}
               <br />
               <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -107,6 +108,67 @@ const projects = () => {
                   equipments.
                 </p>
               </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Project 3 */}
+        <div className="h-fit mt-56 border border-x-0 border-b-black" id="pj1">
+          <section className=" body-font">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              {width <= 768 ? (
+                <>
+                  {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"> */}
+                  <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                    <Image
+                      width={500}
+                      height={500}
+                      src={project3}
+                      className="object-cover object-center"
+                      alt="Goro"
+                    />
+                  </div>
+                  {/* </div> */}
+                  <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
+                      Around Goro Hospital
+                    </h1>
+                    <p className="mb-8 leading-relaxed text-center">
+                      We have installed a solar system for a home around goro
+                      hospital. As it's clearly seen below, this system is
+                      simple and lightweight while at the same time offers full
+                      coverage of a house's electrical needs.
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
+                      Around Goro Hospital
+                    </h1>
+                    <p className="mb-8 leading-relaxed text-center">
+                      We have installed a solar system for a home around goro
+                      hospital. As it's clearly seen below, this system is
+                      simple and lightweight while at the same time offers full
+                      coverage of a house's electrical needs.
+                    </p>
+                  </div>
+                  <br />
+
+                  {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"> */}
+                  <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                    <Image
+                      width={500}
+                      height={500}
+                      src={project3}
+                      className="object-cover object-center"
+                      alt="Goro Hospital"
+                    />
+                  </div>
+                  {/* </div> */}
+                </>
+              )}
             </div>
           </section>
         </div>
