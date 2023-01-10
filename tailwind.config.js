@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        heroBg: "url('/images/resizedImg/hero4.jpg')",
+        heroBg: "url('/images/resizedImg/hero5.jpg')",
         heroServiceBg: "url('/images/resizedImg/hero4.webp')",
         aboutBg: "url('/images/resizedImg/about2.jpg')",
         projectBg: "url('/images/resizedImg/project.webp')",
