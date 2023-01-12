@@ -66,6 +66,13 @@ import sps4 from "../public/images/sps/sps4.jpg";
 import sps5 from "../public/images/sps/sps5.jpg";
 import sps6 from "../public/images/sps/sps6.jpg";
 
+import projects1 from "../public/images/projects/projects1.jpg";
+import projects2 from "../public/images/projects/projects2.jpg";
+import projects3 from "../public/images/projects/projects3.jpg";
+import projects4 from "../public/images/projects/projects4.jpg";
+import projects5 from "../public/images/projects/projects5.jpg";
+import projects6 from "../public/images/projects/projects6.jpg";
+
 const Nuka = ({ name }) => {
   const __dirName = `/images/${name}/`;
 
@@ -638,6 +645,70 @@ const Nuka = ({ name }) => {
             />
             <Image
               src={sps6}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+          </Carousel>
+        </div>
+      );
+    case "projects":
+      return (
+        <div className="w-auto sm:w-auto xs:w-auto md:w-96 h-fit">
+          <Carousel
+            easing={easeCircleOut}
+            edgeEasing={easeElasticOut}
+            dragging={true}
+            wrapAround={true}
+            slidesToShow={1}
+            autoplay={true}
+            cellAlign="center"
+            speed={500}
+            defaultControlsConfig={{
+              nextButtonText: ">",
+              prevButtonText: "<",
+              //   nextButtonClassName: "invisible",
+              //   prevButtonClassName: "invisible",
+            }}
+          >
+            <Image
+              src={projects1}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+            <Image
+              src={projects2}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+            <Image
+              src={projects3}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+            <Image
+              src={projects4}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+            <Image
+              src={projects5}
+              alt={`${name} image`}
+              className="object-contain h-80 w-full"
+              width={500}
+              height={500}
+            />
+            <Image
+              src={projects6}
               alt={`${name} image`}
               className="object-contain h-80 w-full"
               width={500}

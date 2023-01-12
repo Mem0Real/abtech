@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/layout";
 import Image from "next/image";
+
+import Nuka from "../../carousel/Nuka";
+
 import project1 from "../../public/images/project1.jpg";
 import project2 from "../../public/images/project2.jpg";
 import project3 from "../../public/images/project3.jpg";
@@ -169,6 +172,32 @@ const projects = () => {
                   {/* </div> */}
                 </>
               )}
+            </div>
+          </section>
+        </div>
+
+        {/* Project 4 */}
+        <div className="h-fit " id="pj2">
+          <section className=" body-font">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <div className="w-fit overflow-hidden lg:h-auto h-fit object-contain object-center rounded-md">
+                  <Nuka name="projects" />
+                </div>
+              </div>
+              <br />
+              <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium mx-auto">
+                  Other Jobs Aroud Addis Ababa
+                </h1>
+                <p className="mb-8 leading-relaxed text-center">
+                  Here are some of our other solar products we have provided
+                  around Addis Ababa. These products vary in all shapes and
+                  forms and are specific to the layout of the places we had to
+                  install them and the power requirements the customers' needed.
+                  Take a look.
+                </p>
+              </div>
             </div>
           </section>
         </div>

@@ -19,8 +19,7 @@ module.exports = {
         heroServiceBg: "url('/images/resizedImg/hero4.webp')",
         aboutBg: "url('/images/resizedImg/about2.jpg')",
         projectBg: "url('/images/resizedImg/project.webp')",
-        productBg: "url('/images/resizedImg/product.webp')",
-        productDarkBg: "url('/images/productDark.jpg')",
+        productBg: "url('/images/resizedImg/product2.jpg')",
         serviceBg: "url('/images/resizedImg/service.webp')",
 
         battery: "url('/images/dropDown/battery.jpg')",

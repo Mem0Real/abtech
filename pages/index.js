@@ -55,7 +55,7 @@ export default function Home() {
         </div>
 
         {/* Products */}
-        <div className="h-screen flex items-center justify-center md:justify-start bg-productBg bg-center bg-contain bg-white bg-no-repeat pb-36">
+        <div className="h-screen flex items-center justify-center md:justify-start bg-productBg bg-center bg-cover bg-white bg-no-repeat pb-36">
           <div className="container flex flex-col md:w-1/2 mt-80 text-center justify-center items-center">
             <h1 className="text-2xl md:backdrop-grayscale backdrop-blur-md bg-black/50 rounded-lg lg:py-12 lg:ml-3 ">
               We provide a multitude of products ranging from simple, handheld
